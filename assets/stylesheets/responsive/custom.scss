@@ -286,6 +286,10 @@ a.link_button_green_large {
 
 /* Header */
 
+#topnav.pro {
+  background-color: #333333;
+}
+
 #topnav {
   background-color: desaturate(darken($main_menu-bg, 2.5%), 5%);
   @media( min-width: $main_menu-mobile_menu_cutoff ) {
@@ -444,6 +448,9 @@ a.link_button_green_large {
     }
   }
 
+#banner.pro {
+  background-color: #333333;
+}
 #banner {
   background-color: $main_menu-bg;
 
