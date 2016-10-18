@@ -1,0 +1,22 @@
+.js {
+  .js-hide {
+    display: none;
+  }
+}
+
+.dashboard-header,
+.dashboard-body {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.dashboard-left-column {
+  width: 25%;
+  padding: 2em;
+}
+
+.dashboard-right-column {
+  width: 75%;
+  padding: 2em;
+}
