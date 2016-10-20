@@ -369,3 +369,113 @@ h1 .typed-cursor {
     }
   }
 }
+
+
+// Search results page
+
+// Override the floating a little bit
+#authority_selection {
+  float:none;
+  width: 100%;
+}
+
+.authority-results {
+  @include flexbox();
+}
+
+.authorities {
+  @include flex(0 0 66%);
+  margin-right: 2em;
+  float: left;
+}
+
+.authority-groups {
+  @include flex(0 0 33%);
+  float:left;
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    color: #197ace;
+  }
+}
+
+.add-to-request-button:before {
+  content: "+";
+  margin-right: 0.5em;
+}
+.add-to-request-button.disabled:before {
+  content: "";
+  margin-right: 0;
+}
+// OMG I hate this css selector
+a.link_button_green.add-to-request-button.disabled,
+a.link_button_green.add-to-request-button.disabled:hover,
+a.link_button_green.add-to-request-button.disabled:active,
+a.link_button_green.add-to-request-button.disabled:visited,
+a.link_button_green.add-to-request-button.disabled:focus,
+a.link_button_green.add-to-request-button.disabled:visited:focus,
+a.link_button_green.add-to-request-button.disabled:visited:hover,
+a.link_button_green.add-to-request-button.disabled:visited:active {
+  color: #ccc;
+  background-color: #999;
+  cursor: default;
+}
+
+.group-details {
+  @include clearfix;
+  margin-bottom: 1em;
+}
+
+.star-rating,
+.verified {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+.star {
+  color: green;
+}
+.verified-tick {
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  width: 1.1em;
+  height: 1.1em;
+  border-color: darken(green, 20%);
+  padding: 0 2px 0 2px;
+}
+
+.recipients {
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 2em;
+  background-color: lighten(#444, 10%);
+  color: white;
+  a,
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  .recipient {
+    display: inline-block;
+    margin: 0 1em 1em 0;
+    background-color: #444;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    padding: 0.5em;
+    border-radius: 3px;
+  }
+  .recipient-remove {
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+  }
+}
+
+.recipients-title {
+  @include clearfix;
+}
+.clear-recipients {
+  float: right;
+}
