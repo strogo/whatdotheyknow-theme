@@ -1,3 +1,4 @@
+// Just a helper for prototype JS
 .js {
   .js-hide {
     display: none;
@@ -329,5 +330,41 @@ h1 .typed-cursor {
   padding-right: 1em;
   h2 {
     font-size: 1em;
+  }
+}
+
+
+// Login page
+#content.pro-login {
+  margin: 0 auto;
+  max-width: 24em;
+  float: none;
+  text-align: center;
+
+  .signin {
+    text-align: left;
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+
+    .form_label {
+      margin-bottom: 0.5em;
+      .help-text {
+        display: block;
+        font-size: 0.8em;
+      }
+    }
+    .form_checkbox .form_label .help-text {
+      margin-left: 1em;
+    }
+    input[type=text] {
+      border-radius: 5px;
+      height: 3rem; // Increase on 2.3125 in main css
+      margin-bottom: 0;
+    }
+    input[type=submit] {
+      width: 100%;
+      margin-bottom: 1em;
+    }
   }
 }
