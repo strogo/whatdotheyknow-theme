@@ -357,7 +357,8 @@ h1 .typed-cursor {
     .form_checkbox .form_label .help-text {
       margin-left: 1em;
     }
-    input[type=text] {
+    input[type=text],
+    input[type=password] {
       border-radius: 5px;
       height: 3rem; // Increase on 2.3125 in main css
       margin-bottom: 0;
