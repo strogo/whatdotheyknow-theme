@@ -434,15 +434,15 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 }
 
 .star {
-  color: green;
+  color: #62b356;
 }
 .verified-tick {
   color: white;
-  background-color: green;
+  background-color: #62b356;
   border-radius: 50%;
   width: 1.1em;
   height: 1.1em;
-  border-color: darken(green, 20%);
+  border-color: darken(#62b356, 20%);
   padding: 0 2px 0 2px;
 }
 
