@@ -447,7 +447,6 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 }
 
 .recipients {
-  padding: 1em;
   border-radius: 5px;
   margin-bottom: 2em;
   background-color: lighten(#444, 10%);
@@ -457,25 +456,53 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
     color: white;
     text-decoration: none;
   }
-  .recipient {
-    display: inline-block;
-    margin: 0 1em 1em 0;
-    background-color: #444;
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
-    padding: 0.5em;
-    border-radius: 3px;
-  }
-  .recipient-remove {
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-    margin-left: 0.5em;
-  }
+}
+
+.recipients-list {
+  padding: 1em;
+}
+
+.recipient {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  background-color: #444;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.5em 1em;
+  border-radius: 3px;
+}
+.recipient-remove {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5em;
 }
 
 .recipients-title {
   @include clearfix;
+  padding: 1em;
 }
 .clear-recipients {
   float: right;
+}
+
+.recipients-footer {
+  @include flexbox;
+  background-color: #444;
+  padding: 1em;
+}
+
+.batch-request-message {
+  @include flex(0 0 75%);
+}
+.send-request {
+  @include flex(0 0 25%);
+}
+
+.send-request-button {
+  display: block;
+  float: right;
+  background-color: #527280;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.5em 1em;
+  border-radius: 3px;
 }
