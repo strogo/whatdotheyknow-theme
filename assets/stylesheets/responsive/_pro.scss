@@ -422,6 +422,16 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
   cursor: default;
 }
 
+.request-directly-button {
+  // !important because I hate the link_button_green css
+  margin-left: 2em !important;
+  background-color: #62b356 !important;
+}
+.request-directly-button:after {
+  content: "❯";
+  margin-left: 0.5em;
+}
+
 .group-details {
   @include clearfix;
   margin-bottom: 1em;
