@@ -516,3 +516,19 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
   padding: 0.5em 1em;
   border-radius: 3px;
 }
+
+.new_info_request .selectize-control.recipients-input {
+  margin-top: 1em;
+}
+
+.recipient-result {
+  font-weight: normal;
+  border-bottom: 1px solid #ccc;
+  .name {
+    margin-top: 1em;
+  }
+  .requests {
+    font-size: 0.8em;
+    color: #999;
+  }
+}
