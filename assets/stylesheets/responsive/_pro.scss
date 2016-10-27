@@ -563,3 +563,81 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
     color: #999;
   }
 }
+
+
+// Requests page
+.requests__header {
+  background-color: #f3f1eb;
+  @include flexbox;
+  padding: 0.5em;
+}
+
+.requests__search,
+.requests__sort,
+.requests__filters {
+  @include flex(0 0 33%);
+  margin-right: 1em;
+
+  input, select, label {
+    display: inline-block;
+  }
+  select {
+    max-width: 60%;
+  }
+}
+
+.requests__filters {
+  margin-right: 0;
+}
+
+.requests__list {
+  margin-top: 0.5em;
+}
+
+.request {
+  border-bottom: 1px solid #ccc;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.request__title {
+  font-size: 1.25em;
+}
+
+.request__meta {
+  @include flexbox;
+  width: 100%;
+}
+
+.request__recipient,
+.request__created,
+.request__updated,
+.request__status,
+.request__actions {
+  margin-right: 1em;
+  font-size: 0.85em;
+}
+
+.request__recipient,
+.request__status {
+  @include flex(0 0 20%);
+}
+
+.request__created,
+.request__updated {
+  @include flex(0 0 15%);
+}
+
+.request__actions {
+  @include flex(0 0 30%);
+  margin-right: 0;
+  margin-left: 1em;
+
+}
+
+.request__meta__label {
+  font-size: 0.75em;
+  display: block;
+  color: #999;
+}
