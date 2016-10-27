@@ -132,6 +132,7 @@
 .dashboard-header,
 .dashboard-body {
   @include flexbox;
+  padding: 1em;
 }
 
 .dashboard-left-column {
@@ -146,13 +147,17 @@
 }
 
 .dashboard-header {
+  background-color: #e6e4df;
+  border: 1px solid #e1dfda;
   margin-top: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: #333;
-  color: white;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  padding-left: 3em;
+  h1 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display:block;
+    width:100%;
+    font-weight: bold;
+  }
 }
 
 .dashboard-profile__image {
