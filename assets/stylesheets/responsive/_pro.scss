@@ -7,7 +7,7 @@
 
 
 // Tweak the position of the search because we've moved it
-.pro #navigation_search {
+#navigation_search {
   top: 1em;
 }
 
@@ -21,6 +21,7 @@
 #navigation .more-menu {
   position: absolute;
   width: 275px;
+  z-index: 999;
   background-color: #333;
   text-align: left;
   border-bottom-right-radius: 5px;
@@ -74,6 +75,7 @@
   position: absolute;
   right: 0;
   width: 275px;
+  z-index: 999;
   background-color: white;
   color: black;
   border-bottom-right-radius: 5px;
