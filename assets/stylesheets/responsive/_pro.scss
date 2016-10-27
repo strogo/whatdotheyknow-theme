@@ -206,19 +206,29 @@ h1 {
   margin-bottom: 1em;
 }
 
-.dashboard-folders {
+.dashboard-folders,
+.dashboard-sub-folders {
   list-style: none;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.dashboard-sub-folders {
+  margin: 1em 0 2em 0.5em;
+}
+
+.dashboard-folder {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
 .dashboard-folder a,
 .dashboard-folder a:hover,
-.dashboard-folder--disabled {
+.dashboard-folder--disabled .fake-link {
   color: black;
   display: block;
-  padding: 1em 1em 1em 0;
+  padding: 0.5em 1em 0.5em 1em;
   width: 100%;
   border-bottom: 1px solid #ccc;
   text-decoration: none;
@@ -230,6 +240,18 @@ h1 {
 
 .dashboard-folder--disabled {
   color: #999;
+}
+
+.dashboard-folder--top-level {
+  background-color: #ddd;
+  margin-bottom: 1em;
+}
+
+.dashboard-folder--selected {
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #efefef;
+  margin-bottom: 0;
 }
 
 .dashboard-folder__count {
@@ -566,6 +588,11 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 
 
 // Requests page
+.requests__folder-title {
+  h2 {
+    margin-top: 0;
+  }
+}
 .requests__header {
   background-color: #f3f1eb;
   @include flexbox;
@@ -580,6 +607,7 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 
   input, select, label {
     display: inline-block;
+    margin-bottom: 0;
   }
   select {
     max-width: 60%;
@@ -603,11 +631,11 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 
 .request__title {
   font-size: 1.25em;
+  margin-top: 0;
 }
 
 .request__meta {
   @include flexbox;
-  width: 100%;
 }
 
 .request__recipient,
@@ -616,12 +644,15 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 .request__status,
 .request__actions {
   margin-right: 1em;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 
+// TODO - the flex() rules for these add up to way less than 100%, yet the
+// elements still overflow their container. Not sure why. I've hacked it by
+// reducing the width of the select in the last element and floating it right
 .request__recipient,
 .request__status {
-  @include flex(0 0 20%);
+  @include flex(0 0 15%);
 }
 
 .request__created,
@@ -630,14 +661,18 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
 }
 
 .request__actions {
-  @include flex(0 0 30%);
+  @include flex(0 0 31%); // No idea why this has to be 31% in particular
+  @include clearfix;
   margin-right: 0;
-  margin-left: 1em;
+  .actions {
+    max-width: 90%;
+    float: right;
+  }
 
 }
 
 .request__meta__label {
-  font-size: 0.75em;
+  font-size: 0.8em;
   display: block;
   color: #999;
 }
