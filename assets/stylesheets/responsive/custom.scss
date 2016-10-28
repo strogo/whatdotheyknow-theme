@@ -287,7 +287,8 @@ a.link_button_green_large {
 /* Header */
 
 #topnav.pro {
-  background-color: #333333;
+  background-color: rgba(0,0,0,0.1);
+  box-shadow: inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
 #topnav {
@@ -308,6 +309,7 @@ a.link_button_green_large {
   /* Show which section is currently selected */
   li.selected a{
     @extend .selected-menu-item;
+    color: #2D7A8A;
   }
 }
 
@@ -449,8 +451,10 @@ a.link_button_green_large {
   }
 
 #banner.pro {
-  background-color: #333333;
+  background-color: #4C888F;
+  background-image: linear-gradient(-46deg, #4C888F 0%, #4C888F 9%, #365B74 63%);
 }
+
 #banner {
   background-color: $main_menu-bg;
 
