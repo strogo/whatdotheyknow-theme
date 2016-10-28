@@ -5,6 +5,9 @@
   }
 }
 
+body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
 
 // Tweak the position of the search because we've moved it
 #navigation_search {
@@ -47,7 +50,7 @@
 .pro-pill {
   font-size: 0.75em;
   color: white;
-  background-color: purple;
+  background-color: #FFFF00;
   border-radius: 2px;
   padding: 0px 5px 3px 3px;
   text-align: center;
