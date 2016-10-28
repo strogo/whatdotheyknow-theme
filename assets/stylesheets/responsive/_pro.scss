@@ -676,3 +676,51 @@ a.link_button_green.add-to-request-button.disabled:visited:active {
   display: block;
   color: #999;
 }
+
+// Request in progress page
+// More css-selector specivity issues here
+a.back-to-requests-button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  background-color: #f3f1eb;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  color: black;
+  text-decoration: none;
+  &:before {
+    content: "◀";
+    margin-right: 0.5em;
+    font-size: 0.75em;
+  }
+  &:hover {
+    text-decoration: none;
+    background-color: lighten(#f3f1eb, 10%);
+  }
+}
+
+.request-page {
+  background-color: white;
+  padding: 0 3em 3em 3em;
+  margin-top: 2em;
+
+  h1 {
+    margin-top: 1em;
+  }
+
+  .request-status-and-actions {
+    @include flexbox;
+    #request_status {
+      @include flex(0 0 75%);
+    }
+    .request__actions {
+      @include flex(0 0 25%);
+    }
+  }
+}
+
+.icon_partially_successful,
+.request_icon_line {
+  background-color: transparent;
+}
